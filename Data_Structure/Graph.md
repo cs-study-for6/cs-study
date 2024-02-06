@@ -1,6 +1,6 @@
 # Graph
 ## 그래프란?
-![graph](/./image/graph.png)
+![graph](./image/graph.png)
 자료구조로써의 그래프는 정점(Vertex)과 정점들을 연결하는 변(Edge)으로 구성이 된다. 일반적으로 정점은 원으로 표현하고 변은 화살표나 선분으로 표현한다.
 
 해석학적인 그래프와는 구분이 필요하다.
@@ -23,26 +23,26 @@
 
 ## 그래프의 종류
 ### 무방향 그래프
-![undirgraph](/./image/undirgraph.png)
+![undirgraph](./image/undirgraph.png)
 간선에 방향이 없는 그래프이다. 간선을 선분으로 표현하는 경우 양방향 모두 이동이 가능하며, 정점 v와 정점 w를 연결하는 간선을 (v, w)라고 하면, (v, w)와 (w, v)는 같은 간선이다.
 정점 n개일 때 무방향 그래프가 가질 수 있는 최대 간선 수는 **n(n-1)/2** 개 이다.
 
 ### 방향 그래프
-![dirgraph](/./image/dirgraph.png)
+![dirgraph](./image/dirgraph.png)
 간선에 방향이 있는 그래프이다. 간선을 화살표로 나타내는 경우 해당 방향으로만 이동할 수 있으며, 정점 v에서 w로 가는 간선을 (v, w)라고 하고, 이때는 간선 (w, v)와 다르다.
 정점 n개일 때 방향 그래프가 가질 수 있는 최대 간선 수는 **n(n-1)** 개 이다.
 
 ### 완전 그래프
-![complegraph](/./image/complegraph.png)
+![complegraph](./image/complegraph.png)
 모든 정점에 간선이 있고, 한 정점에서 다른 정점과 모두 연결되어 있는 그래프이다.
 
 ### 가중치 그래프
-![wgraph](/./image/wgraph.png)
+![wgraph](./image/wgraph.png)
 간선에 가중치가 부여되어 있다.
 
 ## 그래프 구현
 ### 인접 행렬
-![crgraph](/./image/crgraph.png)
+![crgraph](./image/crgraph.png)
 간선에 가중치가 부여되어 있다.
 - 2차원 배열 matrix 사용
 matrix[v][w] = 1 : 정점 v에서 정점 w로 가는 간선이 있음
@@ -84,7 +84,7 @@ public static void main(String[] args) {
 ```
 
 ### 인접 리스트
-![listgraph](/./image/listgraph.png)
+![listgraph](./image/listgraph.png)
 - 배열 또는 리스트를 사용한다.
 - 정점의 개수만큼 헤드 노드가 있고, 각 정점에 인접한 정점들 리스트로 연결한다.
 - 정점 v의 인접 정점이 w와 z라면 헤드노드 v에 w와 z가 연결 리스트로 연결되어있다.
@@ -150,7 +150,7 @@ public static void main(String[] args) {
 - 그래프의 한 정점에서 출발하여 체계적으로 모든 정점을 한번씩 방문하는 것을 그래프 순회라고 한다. 대표적인 알고리즘으로 깊이 우선 탐색(DFS)와 너비 우선 탐색(BFS)이 있다.
 
 ### 깊이 우선 탐색(DFS, Depth-First-Search)
-![dfs](/./image/dfs.gif)
+![dfs](./image/dfs.gif)
 1. 정점 v 방문
 2. v의 인접 정점 중 아직 방문하지 않은 정점 w를 찾아 DFS를 재귀적으로 수행
 - 시간 복잡도
@@ -199,7 +199,7 @@ class Graph {
 ```
 
 ### 너비 우선 탐색(BFS, Breadth-First-Search)
-![bfs](/./image/bfs.gif)
+![bfs](./image/bfs.gif)
 1. 정점 v 방문 - 큐에 삽입
 2. v의 인접 정점 중 아직 방문하지 않은 정점을 차례대로 방문
 3. 큐에 있는 다음 정점을 꺼내 2번을 실행 ~반복
