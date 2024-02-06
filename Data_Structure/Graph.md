@@ -42,7 +42,7 @@
 
 ## 그래프 구현
 ### 인접 행렬
-![crgraph](./image/crgraph.png)
+![crgraph](./image/crgraph.PNG)
 간선에 가중치가 부여되어 있다.
 - 2차원 배열 matrix 사용
 matrix[v][w] = 1 : 정점 v에서 정점 w로 가는 간선이 있음
@@ -84,7 +84,7 @@ public static void main(String[] args) {
 ```
 
 ### 인접 리스트
-![listgraph](./image/listgraph.png)
+![listgraph](./image/listgraph.PNG)
 - 배열 또는 리스트를 사용한다.
 - 정점의 개수만큼 헤드 노드가 있고, 각 정점에 인접한 정점들 리스트로 연결한다.
 - 정점 v의 인접 정점이 w와 z라면 헤드노드 v에 w와 z가 연결 리스트로 연결되어있다.
