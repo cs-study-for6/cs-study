@@ -33,12 +33,13 @@ class StackTest{
 ```
 2. ArrayDeque 클래스를 사용
 ```java
+import java.util.Queue;
 import java.util.ArrayDeque;
 
 class DequeTest{
     public static void main(String args[]){
         // stack 선언
-        Stack<Integer> stack = new ArrayDeque<Integer>();
+        Deque<Integer> stack = new ArrayDeque<Integer>();
         // 값 삽입
         stack.push(1);
         stack.push(2);
@@ -86,7 +87,7 @@ import java.util.ArrayDeque;
 class DequeTest{
     public static void main(String args[]){
         // queue 선언
-        Queue<Integer> queue = new ArrayDeque<Integer>();
+        Deque<Integer> queue = new ArrayDeque<Integer>();
         // 값 삽입
         // offer / add 사용
         queue.offer(1);
