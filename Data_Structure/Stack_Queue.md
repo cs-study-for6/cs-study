@@ -1,4 +1,4 @@
-# Stack
+# :books: Stack
 ## 정의
 한쪽 끝에서만 자료를 넣거나 뺄 수 있는 자료구조
 ## 특징
@@ -30,7 +30,7 @@ class StackTest{
     }
 }
 ```
-2. Deque 클래스를 사용
+2. ArrayDeque 클래스를 사용
 ```java
 import java.util.ArrayDeque;
 
@@ -47,7 +47,7 @@ class DequeTest{
 }
 ```
 
-# Queue
+# :monorail: Queue
 ## 정의
 한쪽 끝(rear)에서는 삽입만 이루어지고, 다른 한쪽 끝(front)에서는 삭제만 이루어지는 자료 구조
 ## 특징
@@ -77,7 +77,7 @@ class QueueTest{
     }
 }
 ```
-2. Deque 클래스를 사용
+2. ArrayDeque 클래스를 사용
 ```java
 import java.util.Deque;
 import java.util.ArrayDeque;
