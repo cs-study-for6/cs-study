@@ -1,6 +1,6 @@
-[# Heap
+# Heap
 
-1. 힙의 정의
+## 1. 힙의 정의
 - **완전 이진 트리(Complete Binary Tree)**이다. - 힙의 양쪽 자식 트리 역시 힙이다.
 - **부모 노드의 키값과 자식 노드의 키값 사이에는 대소관계가 성립**한다.
     - 키값 대소관계는 부모-자식 간에만 성립되며, 형제 사이에는 대소관계가 정해지지 않는다.(반 정렬)
@@ -22,24 +22,28 @@
     - 마지막 레벨을 제외하고 모든 노드가 채워진 트리 구조입니다.
     - 노드는 왼쪽에서 오른쪽으로 채워져야 합니다.
         
-       ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0cfc4cd6-7bb0-4d47-a030-0655f37b381a/c688041f-3599-41bb-b38f-0595492eec97/Untitled.png)
+       ![Untitled](./image/heap001.png)
         
 
-1. 힙의 종류
+## 2. 힙의 종류
     - 최대 힙 max heap
         - 부모 노드 값이 자식 노드의 값보다 크거나 같다.
         - 루트의 값은 저장된 원소들중에 가장 크다.
     
-    ![Untitled](Heap%206854753a4b864bb19c6287d2ecfbae15/Untitled%201.png)
+    ![Untitled](./image/heap002.png)
     
     - 최소 힙 min heap
         - 부모 노드 값이 자식 노드의 값보다 작거나 같다.
         - 루트의 값은 저장된 원소들중에 가장 작다.
         - 
         
-        ![Untitled](Heap%206854753a4b864bb19c6287d2ecfbae15/Untitled%202.png)
+         ![Untitled](./image/heap003.png)
+
+
+
+      
         
-2. 힙의 구현(개념적)
+## 3. 힙의 구현(개념적)
     
     배열로 구현한다. 계산 편의를 위해 인덱스 0을 사용하지 않고 바로 1을 쓰기도 한다.
     
@@ -51,9 +55,12 @@
     
     오른쪽 : (i*2) + 1
     
-    ![Untitled](Heap%206854753a4b864bb19c6287d2ecfbae15/Untitled%203.png)
+     ![Untitled](./image/heap004.png)
+
+
+   
     
-3. 힙의 연산
+## 4. 힙의 연산
 - 삽입 연산1) 마지막 위치에 노드 만들어 삽입 `> 구조적 성질 만족`2-1) 부모 노드보다 값이 작으면 끝2-2) 부모 노드보다 값이 크면 부모노드와 스위치3) 2번 과정 최대 루트까지 반복 `> 힙의 성질 만족시키기`
     
     ![https://velog.velcdn.com/images/suk13574/post/4f21884f-ff6a-4200-bdca-d0200ccb244d/image.jpg](https://velog.velcdn.com/images/suk13574/post/4f21884f-ff6a-4200-bdca-d0200ccb244d/image.jpg)
@@ -62,7 +69,10 @@
 
 ![https://velog.velcdn.com/images/suk13574/post/8ac9b417-2d2b-4d5b-8bf2-d4afbb1962a9/image.jpg](https://velog.velcdn.com/images/suk13574/post/8ac9b417-2d2b-4d5b-8bf2-d4afbb1962a9/image.jpg)
 
-1. 힙 연산의 시간복잡도
+
+
+
+## 5. 힙 연산의 시간복잡도
 - 삽입연산
     - 최악의 경우 교환을 반복하여 리프노드에서 루트노드가 될 수 있음
     - 교환은 O(1)시간에 처리
@@ -78,7 +88,10 @@
 | 삽입 | O(log n) |
 | 삭제 | O(log n) |
 
-1. 힙의 응용
+
+
+
+## 6. 힙의 응용
 - 우선순위 큐 : 일반적 선입선출과 달리 우선순위가 높은 데이터가 먼저 나오는 우선순위 큐를 힙을 통해 구현할 수 있다.
 
 → 기능 : PriorityQueue
@@ -272,7 +285,10 @@ PriorityQueue<Integer> pqHightest = new PriorityQueue<>(Collections.reverseOrder
         
     - 시간복잡도: O(nlogn) + O(n) = O(nlogn)
     
-1. 자바 코드로 구현
+
+
+
+## 7. 자바 코드로 구현
 
 7-1) ArrayList로 구현 최소 힙 - 삽입 / 삭제
 
