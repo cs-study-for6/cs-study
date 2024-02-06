@@ -22,7 +22,7 @@
     - 마지막 레벨을 제외하고 모든 노드가 채워진 트리 구조입니다.
     - 노드는 왼쪽에서 오른쪽으로 채워져야 합니다.
         
-        ![Untitled](Heap%206854753a4b864bb19c6287d2ecfbae15/Untitled.png)
+       ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0cfc4cd6-7bb0-4d47-a030-0655f37b381a/c688041f-3599-41bb-b38f-0595492eec97/Untitled.png)
         
 
 1. 힙의 종류
