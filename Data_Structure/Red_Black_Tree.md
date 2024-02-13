@@ -251,7 +251,9 @@ Double Red 상황이 되면 규칙 3을 어긴 것이기에, 노드 재배치가
 <br><br><br><br>
 
 [참고자료]
+
 CodeLatte 자바로 배우는 자료구조
 
 [Red-Black Tree 삽입, 삭제 구현 GUI]
-<a href="https://www.cs.usfca.edu/~galles/visualization/RedBlack.html" target="_blank">Red/Black Tree Visualization</a>
+
+<a href="https://www.cs.usfca.edu/~galles/visualization/RedBlack.html" target="_blank" style="text-decoration: none;">Red/Black Tree Visualization</a>
