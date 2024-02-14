@@ -143,7 +143,7 @@ Double Red 상황이 되면 규칙 3을 어긴 것이기에, 노드 재배치가
 
 이 경우를 그림으로 보면 다음과 같다.
 
-(그림)
+<img src="../Data_Structure/image/rbtreeIns1.png" width="420">
 
 위 경우 규칙 3 "레드 노드의 자식 노드는 모두 블랙이다." 가 위배된 상황이다. 이런 경우에는 노드의 색깔만 변경하는 방식을 사용한다.
 
@@ -154,7 +154,7 @@ Double Red 상황이 되면 규칙 3을 어긴 것이기에, 노드 재배치가
 
 변경이 적용된 그림은 다음과 같다.
 
-(그림)
+<img src="../Data_Structure/image/rbtreeIns2.png" width="420">
 
 이렇게 하면 규칙 3, 4가 모두 지켜진다.
 
@@ -164,7 +164,7 @@ Double Red 상황이 되면 규칙 3을 어긴 것이기에, 노드 재배치가
 
 이번에는 부모가 빨강, 삼촌이 빨강, 부모의 좌측 자식으로 빨강 노드가 삽입된 경우이다.
 
-(그림)
+<img src="../Data_Structure/image/rbtreeIns3.png" width="420">
 
 위 상황과 마찬가지로 하면 된다.
 
@@ -173,13 +173,13 @@ Double Red 상황이 되면 규칙 3을 어긴 것이기에, 노드 재배치가
 
 변경이 적용된 그림은 다음과 같다.
 
-(그림)
+<img src="../Data_Structure/image/rbtreeIns4.png" width="420">
 
 <br>
 
 ### 3. 삼촌 노드 Black, 우측-우측 Double Red (Restructuring)
 
-(그림)
+<img src="../Data_Structure/image/rbtreeIns5.png" width="420">
 
 이 상황은 규칙 3 "레드 노드의 자식 노드는 모두 블랙이다." 가 위배된 상황이다. 부모가 빨강, 삼촌이 검정, 부모의 우측 자식으로 빨강 노드가 삽입된 경우이다.
 
@@ -190,7 +190,7 @@ Double Red 상황이 되면 규칙 3을 어긴 것이기에, 노드 재배치가
 1. 조부모 노드와 부모 노드의 색깔을 바꾼다. (swap)
 2. 부모 노드를 축으로 Left-Rotation을 한다. (AVL 트리의 RR 회전과 동일)
 
-(그림)
+<img src="../Data_Structure/image/rbtreeIns6.png" width="420">
 
 이렇게 변경하면 규칙 4와 규칙 3이 모두 지켜진다.
 
@@ -198,7 +198,7 @@ Double Red 상황이 되면 규칙 3을 어긴 것이기에, 노드 재배치가
 
 ### 4. 삼촌 노드 Black, 우측-좌측 Double Red (Restructuring)
 
-(그림)
+<img src="../Data_Structure/image/rbtreeIns7.png" width="370">
 
 마찬가지로 규칙 3이 위배된 상황이다. 부모가 빨강, 삼촌이 검정, 부모의 좌측 자식으로 빨강 노드가 삽입된 경우이다.
 
@@ -212,7 +212,13 @@ Double Red 상황이 되면 규칙 3을 어긴 것이기에, 노드 재배치가
 
 색깔을 변경하는 것을 제외하면, AVL 트리의 RL 회전과 동일한 방식으로 회전하는 것이다.
 
-(그림)
+<img src="../Data_Structure/image/rbtreeIns8_1.png" width="450">
+
+우선, 위와 같이 Right-Rotation을 수행한다.
+
+그리고 아래와 같이 새로운 부모 노드를 축으로 Left-Rotation을 수행한다.
+
+<img src="../Data_Structure/image/rbtreeIns8_2.png" width="410">
 
 <br>
 
@@ -250,10 +256,10 @@ Double Red 상황이 되면 규칙 3을 어긴 것이기에, 노드 재배치가
 
 <br><br><br><br>
 
-[참고자료]
+<b>[참고자료]</b>
 
 CodeLatte 자바로 배우는 자료구조
 
-[Red-Black Tree 삽입, 삭제 구현 GUI]
+<b>[Red-Black Tree 구현 GUI]</b>
 
 <a href="https://www.cs.usfca.edu/~galles/visualization/RedBlack.html" target="_blank" style="text-decoration: none;">Red/Black Tree Visualization</a>
