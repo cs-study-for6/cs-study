@@ -35,8 +35,8 @@
     - 최소 힙 min heap
         - 부모 노드 값이 자식 노드의 값보다 작거나 같다.
         - 루트의 값은 저장된 원소들중에 가장 작다.
-        
-       ![Untitled](./image/heap003.png)
+
+![Untitled](./image/heap003.png)
          
 
 
@@ -54,8 +54,8 @@
     왼쪽 : i * 2
     
     오른쪽 : (i*2) + 1
-        
-       ![Untitled](./image/heap004.png)
+![Untitled](./image/heap004.png)
+       
     
 
 
