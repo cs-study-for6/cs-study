@@ -41,10 +41,10 @@ class DequeTest{
         // stack 선언
         Deque<Integer> stack = new ArrayDeque<Integer>();
         // 값 삽입
-        stack.push(1);
-        stack.push(2);
+        stack.add(1);
+        stack.add(2);
         // 추출 -> 반환값 2
-        stack.pop();
+        stack.pollLast()();
     }
 }
 ```
@@ -98,4 +98,4 @@ class DequeTest{
 }
 ```
 
-
+### [큐의 종류](./Queue.md)
