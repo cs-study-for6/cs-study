@@ -29,8 +29,13 @@
     - 최대 힙 max heap
         - 부모 노드 값이 자식 노드의 값보다 크거나 같다.
         - 루트의 값은 저장된 원소들중에 가장 크다.
+
+
     
-    ![Untitled](./image/heap002.png)
+ ![Untitled](./image/heap002.png)
+
+
+ 
     
     - 최소 힙 min heap
         - 부모 노드 값이 자식 노드의 값보다 작거나 같다.
