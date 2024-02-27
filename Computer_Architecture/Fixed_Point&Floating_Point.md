@@ -63,7 +63,7 @@ But, <u>숫자의 범위가 너무 제한적</u>이다.
 
 <img src="./image/floatTofloating.png" alt="단정도실수" width="500">
 
-<img src="./image/doubleTofloating.png" alt="배정도실수" width="680">
+<img src="./image/doubleTofloating.png" alt="배정도실수" width="660">
 
 단정도 실수든, 배정도 실수든 부호 비트 1 bit는 고정이다.
 
