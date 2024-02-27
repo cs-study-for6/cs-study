@@ -212,9 +212,17 @@ Ex&#41; 1001.0011
 
 정리하자면 다음과 같다.
 
-고정 소수점 방식은 표현하는 과정은 편리하지만, 정수부와 소수부의 자릿수가 제한되기 때문에 표현 가능한 수의 범위 및 정밀도가 떨어진다. 그래서 잘 사용하지 않는다.
+고정 소수점 (Fixed Point) 방식은 실수를 정수부와 소수부로 분할 표현해서 비교적 단순하다.
 
-부동 소수점 방식은 고정 소수점 방식에 비해 복잡하지만, 표현 가능한 수의 범위와 정밀도가 크다는 장점이 있다. 현재 대부분의 컴퓨터는 부동 소수점 표현 방식을 사용하고 있다. 다만, 표현하고자 하는 수가 1/2^n의 합으로 표현되지 못하면 이진법에서 무한소수가 되고, 비트는 한정되어 있으므로 오차가 발생한다.
+하지만, 정수부와 소수부의 자릿수가 제한되기 때문에 표현 가능한 수의 범위 및 정밀도가 떨어진다. 그래서 잘 사용하지 않는다.
+
+부동 소수점 (Floating Point) 방식은 이러한 고정 소수점 방식의 한계를 해결하기 위한 방법이다.
+
+부동 소수점 방식은 실수를 가수부 + 지수부로 나누어 표현한다. 가수는 실수의 소수 부분이고, 지수는 가수의 어디쯤에 소수점이 있는지 나타낸다. 즉, 지수의 값에 따라 소수점이 움직이기 때문에 부동(浮動)소수점이라고 하는 것이다.
+
+부동 소수점 방식은 고정 소수점 방식에 비해 복잡하지만, 표현 가능한 수의 범위와 정밀도가 크다는 장점이 있다. 가수부가 지수부보다 길어서 정밀도가 비교적 충분한 것이다. 현재 대부분의 컴퓨터는 국제 표준 IEEE-754 부동 소수점 표현 방식을 사용하고 있다. 
+
+다만, 표현하고자 하는 수가 1/2^n의 합으로 표현되지 못하면 이진법에서 무한소수가 되고, 비트는 한정되어 있으므로 오차가 발생한다. 정규화를 통해 오차를 최대한 줄여야 한다.
 
 <br><br><br><br>
 
@@ -225,5 +233,7 @@ Ex&#41; 1001.0011
 <a href="https://github.com/da-in/tech-interview-study/blob/main/CS%20Deep%20Dive/Computer%20Architecture/%EC%8B%A4%EC%88%98%20%ED%91%9C%ED%98%84.md" target="_blank" style="text-decoration-line:none;">https://github.com/da-in/tech-interview-study/blob/main/CS%20Deep%20Dive/Computer%20Architecture/%EC%8B%A4%EC%88%98%20%ED%91%9C%ED%98%84.md</a>
 
 <a href="https://github.com/jobhope/TechnicalNote/blob/master/computer_architecture/RealNumberRepresentation.md" target="_blank" style="text-decoration-line:none;">https://github.com/jobhope/TechnicalNote/blob/master/computer_architecture/RealNumberRepresentation.md</a>
+
+<a href="https://do-rang.tistory.com/73" target="_blank" style="text-decoration-line:none;">https://do-rang.tistory.com/73</a>
 
 <a href="" target="_blank" style="text-decoration-line:none;"></a>
