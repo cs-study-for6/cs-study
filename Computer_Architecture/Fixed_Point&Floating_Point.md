@@ -12,7 +12,7 @@
 
 <img src="./image/fixed_point.png" alt="고정소수점 그림" width="600" />
 
-32 bit를 기준으로 한 예시이다. 맨 앞에 있는 한 칸은 부호 비트로 1 bit의 공간을 할당하고, 그 다음 15 칸은 정수를 표현하는 정수부, 그리고 그 이후의 16칸은 소수(소수점 이후의 실수)를 표현하는 소수부로 설정하였다.
+32 bit를 기준으로 한 예시이다. 맨 앞에 있는 한 칸은 부호 비트(Sign Bit)로 1 bit의 공간을 할당한다. 0은 양수를, 1은 음수를 의미한다. 그 다음 15 칸은 정수를 표현하는 정수부, 그리고 그 이후의 16칸은 소수(소수점 이후의 실수)를 표현하는 소수부로 설정하였다. (소수점의 위치를 중앙으로 고정하여, 앞을 정수부 뒤를 소수부로 채운 것이다.)
 
 위 그림에서 경계는 필요에 의해서 왔다갔다 할 수 있기는 하다.
 
@@ -37,13 +37,15 @@ But, <u>숫자의 범위가 너무 제한적</u>이다.
 
 ## 부동 소수점 (Floating Point) 표기법
 
-부동 소수점의 '부동(浮動)'은 '둥둥 떠다녀서 왔다갔다 한다'는 의미이다.
+부동 소수점의 '부동(浮動)'은 '둥둥 떠다녀서 왔다갔다 한다'는 의미이다. 즉 소수점이 유동적이라는 의미이다.
+
+IEEE 754는 전기 전자 기술자 협회(IEEE)에서 개발한 컴퓨터에서 부동 소수점을 표현하는 가장 보편화된 표준이다.
 
 <b>부동 소수점 표기 방법은 소수점의 위치를 고정시켜 표현하는 방식</b>이다. 이때 고정시킨다는 것은 <b>'정규화'</b>를 한다는 것이다. 아래 그림은 정규화를 실행한 것이다.
 
 <img src="./image/floating_point_ex.png" alt="부동소수점 예시" width="280" />
 
-즉, 소수점의 위치를 왼쪽의 가장 유효한 숫자(즉 1) 다음으로 고정시키고 밑 수의 지수 승으로 표현하는 것이다.
+즉, 소수점의 위치를 왼쪽의 가장 유효한 숫자(즉 1) 다음으로 고정시키고 밑 수의 지수 승으로 표현하는 것이다. 정규화를 한 결과의 정수부는 무조건 1이기 때문에 제외하며, 이를 hidden bit이라고 부른다.
 
 위 그림의 경우 세 칸 이동했으므로 2^3을 곱했다.
 
@@ -52,6 +54,13 @@ But, <u>숫자의 범위가 너무 제한적</u>이다.
 <img src="./image/mantissa_exponent.png" alt="가수부와 실수부" width="305" />
 
 위 그림에서 볼 수 있듯이, 소수 부분을 '가수부'라 하고, 지수 부분을 '지수부'라고 한다.
+
+<br>
+
+부동 소수점 방식의 장단점은 다음과 같다.
+
+* 장점 : 표현할 수 있는 수의 범위가 넓어진다.
+* 단점 : 오차가 발생할 수 있다.
 
 <br>
 
@@ -65,7 +74,7 @@ But, <u>숫자의 범위가 너무 제한적</u>이다.
 
 <img src="./image/doubleTofloating.png" alt="배정도실수" width="660">
 
-단정도 실수든, 배정도 실수든 부호 비트 1 bit는 고정이다.
+단정도 실수든, 배정도 실수든 부호 비트(Sign Bit) 1 bit는 고정이다. 0은 양수를, 1은 음수를 의미한다.
 
 * 가수부(mantissa) : 실수의 유효 자릿수들을 부호화된 고정 소수점으로 표현한 것
 * 지수부(exponent) : 실제 소수점의 위치를 지수 승으로 표현한 것
@@ -180,7 +189,7 @@ Ex&#41; 1001.0011
 
 그런데 3초과법을 사용해 음수를 다 없앴다면 가령 001과 101 중 어떤 것이 더 큰지 쉽게 알 수 있는 것이다.
 
-그래서 8 bit의 단정도 실수에서는 익세스 표현법으로 127을 기본으로 잡고 초과값으로 쓴다. 대소비교가 훨씬 간단해지는 것이다.
+그래서 8 bit의 단정도 실수에서는 익세스 표현법으로 127을 기본으로 잡고 초과값으로 쓴다. 대소비교가 훨씬 간단해지는 것이다. 이때 127은 'Bias'라고 표현한다.
 
 <br>
 
@@ -192,3 +201,25 @@ Ex&#41; 1001.0011
 * 64 bit 실수형 유효자릿수(십진수) : 15
 
 유효자릿수 이후부터는 값이 틀어질 수도 있다. 그래서 0.1 + 0.1 + 0.1 == 0.3 이냐는 질문에 대해 자바스크립트 등에서는 아니라고 답하기도 한다.
+
+<br>
+
+## 고정소수점과 부동소수점 비교
+
+정리하자면 다음과 같다.
+
+고정 소수점 방식은 표현하는 과정은 편리하지만, 정수부와 소수부의 자릿수가 제한되기 때문에 표현 가능한 수의 범위 및 정밀도가 떨어진다. 그래서 잘 사용하지 않는다.
+
+부동 소수점 방식은 고정 소수점 방식에 비해 복잡하지만, 표현 가능한 수의 범위와 정밀도가 크다는 장점이 있다. 현재 대부분의 컴퓨터는 부동 소수점 표현 방식을 사용하고 있다. 다만, 표현하고자 하는 수가 1/2^n의 합으로 표현되지 못하면 이진법에서 무한소수가 되고, 비트는 한정되어 있으므로 오차가 발생한다.
+
+<br><br><br><br>
+
+[참고자료]
+
+<a href="https://github.com/gyoogle/tech-interview-for-developer/blob/master/Computer%20Science/Computer%20Architecture/%EA%B3%A0%EC%A0%95%20%EC%86%8C%EC%88%98%EC%A0%90%20%26%20%EB%B6%80%EB%8F%99%20%EC%86%8C%EC%88%98%EC%A0%90.md" target="_blank" style="text-decoration-line:none;">https://github.com/gyoogle/tech-interview-for-developer/blob/master/Computer%20Science/Computer%20Architecture/%EA%B3%A0%EC%A0%95%20%EC%86%8C%EC%88%98%EC%A0%90%20%26%20%EB%B6%80%EB%8F%99%20%EC%86%8C%EC%88%98%EC%A0%90.md</a>
+
+<a href="https://github.com/da-in/tech-interview-study/blob/main/CS%20Deep%20Dive/Computer%20Architecture/%EC%8B%A4%EC%88%98%20%ED%91%9C%ED%98%84.md" target="_blank" style="text-decoration-line:none;">https://github.com/da-in/tech-interview-study/blob/main/CS%20Deep%20Dive/Computer%20Architecture/%EC%8B%A4%EC%88%98%20%ED%91%9C%ED%98%84.md</a>
+
+<a href="https://github.com/jobhope/TechnicalNote/blob/master/computer_architecture/RealNumberRepresentation.md" target="_blank" style="text-decoration-line:none;">https://github.com/jobhope/TechnicalNote/blob/master/computer_architecture/RealNumberRepresentation.md</a>
+
+<a href="" target="_blank" style="text-decoration-line:none;"></a>
