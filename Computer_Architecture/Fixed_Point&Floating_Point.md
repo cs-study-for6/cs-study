@@ -100,7 +100,7 @@ Ex&#41; 1001.0011
 
 예시 숫자를 위 순서에 입각해 가수 부분을 구하는 것을 보면 다음과 같다.
 
-<table style="border-style: solid; border-color: white; border-width: 2px;">
+<table style="border-style: solid; border-width: 2px;">
     <tr>
         <td>
             1001.0011<br>
