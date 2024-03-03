@@ -5,7 +5,7 @@
 - CPU와 GPU 모두 데이터를 읽어 연산처리를 통해 답을 도출하는 기능을 수행한다.
 컴퓨터에서의 역할은 비슷하지만 프로세서 내부의 구조를 살펴보면 CPU와 GPU는 차이가 크다
 
-![Untitled](./image/Cycle.png)
+![Untitled](./CS%2098b04128a3e848d49b2cb8a8c2ca38d0/Untitled.png)
 
 ## CPU(Central processing unit, 중앙처리장치)
 
@@ -70,7 +70,7 @@
             
         - 마이크로 연산과 사이클
             
-            ![Untitled](./image/CPU_GPU_Structure.png)
+            ![Untitled](./CS%2098b04128a3e848d49b2cb8a8c2ca38d0/Untitled%201.png)
             
         
         > 명령어 사이클은 
