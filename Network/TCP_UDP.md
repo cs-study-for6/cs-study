@@ -11,7 +11,7 @@ TCP는 연결형 서비스를 지원하는 양방향 통신 프로토콜로, 통
   - RST(Reset): 연결을 재설정해라
   - **ACK(Acknowledgement)**: 패킷을 받았다
   - **SYN(Synchronize)**: 연결을 시작하겠다
-  - FIN(Finish): 연결울 종료하겠다
+  - FIN(Finish): 연결을 종료하겠다
 
 - 3-way handshaking을 통해 연결을 수립하고, 연결을 수립한 이후 데이터를 주고받는다.
 - 연결을 요청하는 경우 SYN bit를 1로 설정하고, 패킷을 받았음을 표현할 때 ACK bit를 1로 설정한다.
