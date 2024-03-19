@@ -95,3 +95,14 @@ TCP/IP (Transmission Control Protocol / Internet Protocol) 모델은 인터넷 �
 4. <b>응용 계층 (Application Layer)</b> : 최종 사용자가 네트워크 서비스에 접근하는 데 사용되는 프로토콜들을 포함한다. Ex&#41; HTTP, FTP, SMTP, DNS 등
 
 TCP/IP 모델은 OSI 모델보다 간단하고 실용적이며, 현재 전 세계적으로 가장 널리 사용되는 네트워크 프로토콜 모델 중 하나이다. 이 모델을 통해 다양한 장치와 시스템이 효율적으로 통신할 수 있다.
+
+<br>
+
+## OSI 7 계층과 TCP/IP 4 계층 비교
+
+OSI 7 계층과 TCP/IP 4 계층을 그림으로 보면 다음과 같다.
+
+<img width="600" alt="https://www.geeksforgeeks.org/tcp-ip-model/" src="https://github.com/cs-study-for6/cs-study/assets/88493727/870cbd79-a8ef-4692-838c-b7c909761d54">
+
+사실상 같은 내용인데, TCP/IP 4 계층이 좀 더 세분화된 것이 OSI 7 계층이라고 볼 수 있는 것이다.
+
