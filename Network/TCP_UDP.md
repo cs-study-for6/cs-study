@@ -72,6 +72,31 @@ UDP는 비연결형 프로토콜로, 실시간, 일방적 정보 전달을 목�
 - SYN Cookie
 - TCP/UDP Header
 
+### 추가 내용
+#### TCP/UDP 패킷(세그먼트)
+- 패킷의 최대 크기는 제한되어 있고, 데이터의 크기가 이를 초과할 경우 송신 가능한 크기로 분할됨
+- 데이터를 분할하는 로직은 선택하기 나름
+
+#### TCP Header
+![img](./img/tcp_header.jpg)
+[출처](http://www.ktword.co.kr/test/view/view.php?m_temp1=1889)
+- Acknowledgement Number(ack no)에 순서번호가 포함되어 있어서, 다음으로 받아야하는 데이터가 무엇인지 표시
+
+#### UDP
+![img](./img/udp_header.jpeg)
+[출처](http://www.ktword.co.kr/test/view/view.php?m_temp1=323)
+- UDP 자체적으로는 패킷 손실이나 순서에 대한 대비책을 준비하지 않음. 따라서 그런 문제에 민감한 경우 UDP를 사용하지 않는다.(TCP를 사용)
+- 데이터 내부에 순서를 나타내는 번호를 붙이고 감소하는 경우에는 버리는 식으로 연속적인 흐름을 구현할 수는 있음
+
+TCP
+- 3way handshake는 최초에 연결 수립을 위해서만 수행
+- TCP가 패킷의 비손실을 보장하는 방법: ACK
+    - 데이터를 성공적으로 수신하면 ack을 돌려보내고, ack을 수신했을 때 다음 패킷을 전송
+    - 일정 시간동안 ack이 오지 않으면 패킷을 재전송함
+- 원칙상으로는 1:1 통신만 가능하지만, 소켓을 사용하면 서버가 소켓을 여러개 만들고 각각의 소켓이 하나의 클라이언트를 맡아 1:N 기능을 구현할 수 있다
+
+
+
 ### 참고 자료
 https://massive.io/ko/file-transfer/what-is-transmission-control-protocol-tcp/
 https://dev-coco.tistory.com/144
