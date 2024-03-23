@@ -4,11 +4,11 @@
 
 대칭키
 
-![Untitled](TLS_SSL%20a8cef1c64eb0469dbb666bda78ad85fe/Untitled.png)
+![Untitled](./TLS_SSL_imagesrc/Untitled.png)
 
 공개키
 
-![Untitled](TLS_SSL%20a8cef1c64eb0469dbb666bda78ad85fe/Untitled%201.png)
+![Untitled](./TLS_SSL_imagesrc/Untitled%201.png)
 
 초록 키로 암호화 하면 오른쪽 주황색 키로만 복호화 할 수 있음
 
@@ -38,7 +38,7 @@ pre master secret은 서버의 공개 키로 암호화되며 복호화 할 때�
 
 서버가 인증서를 가지고 있어서 굳이 담을 필요가 없어보임. 인증서 별 공개 키는 아래와 같이 확인 가능함
 
-![Untitled](TLS_SSL%20a8cef1c64eb0469dbb666bda78ad85fe/Untitled%202.png)
+![Untitled](./TLS_SSL_imagesrc/Untitled%202.png)
 
 ### 메세지 인증 코드(MAC)가 수신자에게 데이터 무결성을 어떻게 보장하나요?
 
