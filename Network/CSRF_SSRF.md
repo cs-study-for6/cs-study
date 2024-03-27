@@ -2,7 +2,7 @@
 
 ## CSRF(Cross-Site Request Forgery)
 ### 크로스 사이트 요청 위조
-![img](./img/csrf.png)
+![img](./img/csrf.png)<br>
 [출처](https://knowledge-base.secureflag.com/vulnerabilities/cross_site_request_forgery/cross_site_request_forgery_vulnerability.html)
 
 ### 특징
@@ -40,11 +40,13 @@
     - 세션 기반이 아닌, 토큰 기반의 인증을 사용하여 요청마다 수동으로 정보를 헤더에 담아 전송
     - 쿠키가 자동으로 전송되지 않으므로 CSRF 방어가 가능하나, token을 localStorage에 저장하면 XSS 공격에 취약해질 수 있으므로 주의
 
+
 ## SSRF(Server-Side Request Forgery)
 ### 서버 사이드 요청 위조
-![img](./img/ssrf.png)
+![img](./img/ssrf.png)<br>
 [출처](https://www.igloo.co.kr/security-information/ssrf-%EC%B7%A8%EC%95%BD%EC%A0%90%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EA%B3%B5%EA%B2%A9%EC%82%AC%EB%A1%80-%EB%B6%84%EC%84%9D-%EB%B0%8F-%EB%8C%80%EC%9D%91%EB%B0%A9%EC%95%88/)
 
+### 특징
 - 사용자 없이 공격자가 웹서버에 직접 요청을 보냄
 - 내부망에 직접 접근하여 인증 과정을 건너뛰거나, 인증 정보를 획득한 후 해당 정보를 포함시켜 요청을 보내는 방식으로 진행
 - 공격 과정
@@ -61,7 +63,7 @@
 
 ### 방지 방법
 - 화이트리스트 기반의 검증
-    > 블랙리스트 기반: 포함되어서는 안되는 내용이 포함되었는지 검사
+    > 블랙리스트 기반: 포함되어서는 안되는 내용이 포함되었는지 검사<br>
     > 화이트리스트 기반: 사전 정의한 허용 목록에 포함된 내용인지 검사
     - 요청에 포함된 도메인, IP 주소가 화이트리스트(검증된 주소 목록)에 포함된 것인지 확인
     - URL을 검사할 때 문자열의 포함여부 뿐만아니라 위치와 불필요한 기호의 포함 여부를 정확하게 검사
@@ -74,11 +76,11 @@
 - Port Scanning
 
 #### 참고자료
-> https://en.wikipedia.org/wiki/Cross-site_request_forgery
-> https://tibetsandfox.tistory.com/11
-> https://nordvpn.com/ko/blog/csrf/
-> https://liltdevs.tistory.com/178
-> https://stir.tistory.com/265
-> https://medium.com/naver-cloud-platform/ssrf-공격의-피해-사례와-대응-1-d0be4b12d10a
-> https://code-machina.github.io/2019/09/25/Server-Side-Request-Forgery-Prevention.html
+> https://en.wikipedia.org/wiki/Cross-site_request_forgery<br>
+> https://tibetsandfox.tistory.com/11<br>
+> https://nordvpn.com/ko/blog/csrf/<br>
+> https://liltdevs.tistory.com/178<br>
+> https://stir.tistory.com/265<br>
+> https://medium.com/naver-cloud-platform/ssrf-공격의-피해-사례와-대응-1-d0be4b12d10a<br>
+> https://code-machina.github.io/2019/09/25/Server-Side-Request-Forgery-Prevention.html<br>
 > [SSRF 취약점을 이용한 공격사례 분석 및 대응방안](https://www.igloo.co.kr/security-information/ssrf-%EC%B7%A8%EC%95%BD%EC%A0%90%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EA%B3%B5%EA%B2%A9%EC%82%AC%EB%A1%80-%EB%B6%84%EC%84%9D-%EB%B0%8F-%EB%8C%80%EC%9D%91%EB%B0%A9%EC%95%88/)
