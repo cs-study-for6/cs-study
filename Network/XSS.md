@@ -65,3 +65,19 @@ XSS는 Cross-site Scripting의 약자로, Cascading Style Sheet와의 혼동을 
 https://junhyunny.github.io/information/security/spring-mvc/stored-cross-site-scripting/
 https://www.youtube.com/watch?v=bSGqBoZd8WM
 https://junhyunny.github.io/information/security/spring-mvc/reflected-cross-site-scripting/
+
+## Q&A
+### 설명해주신 방식 외에도 DOM Based XSS, Universal XSS라는 공격도 있던데 원리가 좀 다른 것 같아서 같이 설명해주시면 좋겠습니다!
+
+DOM(Document Object Model) Based XSS
+- 보안에 취약한 JavaScript 코드로 DOM 객체(문서 객체 모델)를 제어하는 과정에서 발생.
+
+Universal XSS
+- 클라이언트 측 취약점으로 브라우저 안에 악성 스크립트를 실행
+- 브라우저 자체의 취약점이나 확장 기능 또는 플러그인의 취약점을 악용
+
+### stored xss 는 단순히 브라우저 사용자에게 특정 정보를 보여주는 것 뿐인가요?
+악성 스크립트 실행을 통해 사용자의 정보가 해커에게 빠져나가게 됩니다.
+
+### 악성 스크립트는 어떤 방법으로 사용자의 정보를 빼돌리나요?
+쿠키를 탈취 후 공격자의 웹 사이트로 리다이렉트하는 방법 등으로 정보를 빼돌리게 됩니다.
